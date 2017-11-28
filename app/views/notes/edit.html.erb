@@ -1,2 +1,22 @@
-<h1>Notes#edit</h1>
-<p>Find me in app/views/notes/edit.html.erb</p>
+<h1>Edit</h1>
+<%= render 'layouts/navbar' %>
+<%= yield %>
+<hr>
+
+<%= form_for @note do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back", notes_path %>

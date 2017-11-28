@@ -1,2 +1,21 @@
-<h1>Notes#show</h1>
-<p>Find me in app/views/notes/show.html.erb</p>
+<%= render 'layouts/navbar' %>
+<%= yield %>
+<hr>
+
+<h2>
+  <%= @note.title %>
+</h2>
+
+<p>Info:</p>
+
+<h4>
+  <%= @note.description %>
+</h4>
+
+<p><i>Complete?</i></p>
+
+<h4>
+  <%= @note.completed %>
+</h4>
+
+<%= link_to "Back", notes_path %>
